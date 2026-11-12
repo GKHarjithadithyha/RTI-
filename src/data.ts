@@ -1,0 +1,19 @@
+import type { Application, Notice } from './types';
+export const seedApplications: Application[] = [
+  { id:'RTI/DS/A/2026/001234',type:'RTI request',authority:'Ministry of Road Transport and Highways',subject:'Road safety audit for NH 44',date:'10 Nov 2026',updated:'10 Nov 2026',status:'Under process',description:'Please provide the latest road safety audit and action taken report for the NH 44 stretch near Bengaluru.',name:'Harjith Kumar',email:'harjith@example.com',phone:'+91 98765 43210',address:'12 Lake View Road, Bengaluru, Karnataka 560001',timeline:[{title:'Application submitted',date:'10 Nov 2026',done:true},{title:'Payment confirmed',date:'10 Nov 2026',done:true},{title:'Received by public authority',date:'11 Nov 2026',done:true},{title:'Under process',date:'In progress',done:true},{title:'Response issued',date:'Awaiting response',done:false}] },
+  { id:'RTI/DS/A/2026/001198',type:'RTI request',authority:'Ministry of Education',subject:'Scholarship disbursement data',date:'06 Nov 2026',updated:'06 Nov 2026',status:'Action required',description:'Please share district-wise scholarship disbursement data for the 2025–26 academic year.',name:'Harjith Kumar',email:'harjith@example.com',phone:'+91 98765 43210',address:'12 Lake View Road, Bengaluru, Karnataka 560001',timeline:[{title:'Application submitted',date:'06 Nov 2026',done:true},{title:'Payment confirmed',date:'06 Nov 2026',done:true},{title:'Received by public authority',date:'07 Nov 2026',done:true},{title:'Additional information requested',date:'10 Nov 2026',done:true},{title:'Response issued',date:'Awaiting your reply',done:false}] },
+  { id:'RTI/DS/A/2026/001102',type:'RTI request',authority:'Ministry of Housing and Urban Affairs',subject:'Urban housing scheme progress',date:'29 Oct 2026',updated:'04 Nov 2026',status:'Disposed',description:'Please provide the progress report for affordable housing projects in Bengaluru.',name:'Harjith Kumar',email:'harjith@example.com',phone:'+91 98765 43210',address:'12 Lake View Road, Bengaluru, Karnataka 560001',timeline:[{title:'Application submitted',date:'29 Oct 2026',done:true},{title:'Payment confirmed',date:'29 Oct 2026',done:true},{title:'Received by public authority',date:'30 Oct 2026',done:true},{title:'Under process',date:'02 Nov 2026',done:true},{title:'Response issued',date:'04 Nov 2026',done:true}] }
+];
+export const seedNotices: Notice[] = [
+ {id:'n1',title:'Additional information requested',body:'Please review the request on your scholarship application and respond by 20 Nov 2026.',date:'10 Nov 2026',kind:'Action required',unread:true,applicationId:'RTI/DS/A/2026/001198'},
+ {id:'n2',title:'Your application is under process',body:'The Ministry of Road Transport and Highways has received your application.',date:'11 Nov 2026',kind:'Application update',unread:true,applicationId:'RTI/DS/A/2026/001234'},
+ {id:'n3',title:'Payment confirmed',body:'The application fee for RTI/DS/A/2026/001234 was confirmed.',date:'10 Nov 2026',kind:'Payment update',unread:false,applicationId:'RTI/DS/A/2026/001234'}
+];
+export const authorities: Record<string,string[]> = {
+ 'Ministry of Road Transport and Highways':['National Highways Authority of India','Road Transport Division'],
+ 'Ministry of Education':['Department of Higher Education','Department of School Education and Literacy'],
+ 'Ministry of Home Affairs':['Central Public Information Officer, Ministry of Home Affairs','National Disaster Management Authority'],
+ 'Ministry of Housing and Urban Affairs':['Housing and Urban Affairs Division','Central Public Works Department'],
+ 'Ministry of Health and Family Welfare':['Department of Health and Family Welfare','National Health Authority'],
+ 'Department of Telecommunications':['Department of Telecommunications, New Delhi','Telecom Regulatory Authority of India']
+};
